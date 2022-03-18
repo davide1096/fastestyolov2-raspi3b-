@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="yolofastestv2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/yolofastestv2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/yolofastestv2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu++17" />
+			<Add option="-fexceptions" />
+			<Add directory="/usr/local/include/ncnn" />
+			<Add directory="/usr/local/include/opencv4" />
+			<Add directory="../yolofastestv2" />
+			<Add directory="/usr/include/libcamera" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs --cflags opencv4`" />
+			<Add option="-lpthread" />
+			<Add option="-pthread" />
+			<Add option="-fopenmp" />
+			<Add library="/usr/local/lib/ncnn/libncnn.a" />
+			<Add library="/usr/local/lib/aarch64-linux-gnu/liblccv.so" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="yolofastestv2.cpp" />
+		<Unit filename="yolofastestv2.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
