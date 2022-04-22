@@ -233,7 +233,17 @@ int yoloFastestv2::detection(const cv::Mat srcImg, std::vector<TargetBox>& dstBo
 int yoloFastestv2::drawObjects(cv::Mat& cvImg, const std::vector<TargetBox>& boxes){
     for(size_t i = 0; i < boxes.size(); i++){
         char text[256];
-        sprintf(text, "%s %.1f%%", class_names[boxes[i].cate+1], boxes[i].score * 100);
+        int pixel_height;
+        float distance;
+        if ((boxes[i].cate+1)==1){
+            pixel_height = (boxes[i].y2-boxes[i].y1);
+            distance = (1.73*2714.3*320/2464)/pixel_height;
+            sprintf(text, "%s %.1f%% Approx d=%.2fm", class_names[boxes[i].cate+1], boxes[i].score * 100, distance);
+        }
+        else{
+            sprintf(text, "%s %.1f%%", class_names[boxes[i].cate+1], boxes[i].score * 100);
+        }
+
 
         int baseLine = 0;
         cv::Size label_size = cv::getTextSize(text, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
@@ -251,6 +261,7 @@ int yoloFastestv2::drawObjects(cv::Mat& cvImg, const std::vector<TargetBox>& box
 
         cv::rectangle (cvImg, cv::Point(boxes[i].x1, boxes[i].y1),
                        cv::Point(boxes[i].x2, boxes[i].y2), cv::Scalar(255,0,0));
+
     }
     return 0;
 }
