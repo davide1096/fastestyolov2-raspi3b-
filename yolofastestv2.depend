@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1649282903 source:/home/pi/software/yolofastestv2/yolofastestv2.cpp
+1650663814 source:/home/pi/software/yolofastestv2/yolofastestv2.cpp
 	<math.h>
 	<algorithm>
 	<yolofastestv2.h>
 
-1647623721 /home/pi/software/yolofastestv2/yolofastestv2.h
+1650647358 /home/pi/software/yolofastestv2/yolofastestv2.h
 	"net.h"
 	<vector>
 	<opencv2/opencv.hpp>
@@ -720,16 +720,18 @@
 1602451567 /usr/local/include/opencv4/opencv2/video/background_segm.hpp
 	"opencv2/core.hpp"
 
-1649281476 source:/home/pi/software/yolofastestv2/main.cpp
+1650717911 source:/home/pi/software/yolofastestv2/main.cpp
 	<lccv.hpp>
 	<opencv2/opencv.hpp>
 	<iostream>
+	<fstream>
 	<stdio.h>
 	<vector>
 	<opencv2/core/core.hpp>
 	<opencv2/highgui.hpp>
 	<opencv2/imgproc.hpp>
 	<yolofastestv2.h>
+	<cmath>
 
 1602451567 /usr/local/include/opencv4/opencv2/core/core.hpp
 	"opencv2/core.hpp"

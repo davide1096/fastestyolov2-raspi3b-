@@ -1,0 +1,7 @@
+ROOM: living_room, LIGHT: artificial
+-0.00   error=0.00, falses=0
+-1.50   error=1.50, falses=51
+-2.00   error=2.00, falses=51
+-2.50   error=2.50, falses=52
+-3.00   error=3.00, falses=32
+-3.50   error=3.50, falses=9

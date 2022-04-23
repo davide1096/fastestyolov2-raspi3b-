@@ -50,7 +50,7 @@ public:
     int loadModel(const char* paramPath, const char* binPath);
     int detection(const cv::Mat srcImg, std::vector<TargetBox> &dstBoxes,
                   const float thresh = 0.3);
-    int drawObjects(cv::Mat& cvImg, const std::vector<TargetBox>& boxes);
+    float drawObjects(cv::Mat& cvImg, const std::vector<TargetBox>& boxes);
 };
 
 
